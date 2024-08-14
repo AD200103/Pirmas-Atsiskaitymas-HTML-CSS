@@ -135,33 +135,55 @@ main .introduction .picturesofintroduction .collar {
   height: 100%;
   position: relative;
 }
-main .introduction .picturesofintroduction div {
+main .introduction .picturesofintroduction .sidepicture {
   width: 24%;
   height: 73%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   gap: 20px;
+  position: relative;
 }
-main .introduction .picturesofintroduction div p {
+main .introduction .picturesofintroduction .sidepicture p {
   width: 120px;
   text-align: center;
   font-size: 1rem;
   line-height: 1.2em;
   letter-spacing: 0.05em;
 }
-main .introduction .picturesofintroduction div button {
-  all: unset;
-  background-color: black;
+main .introduction .picturesofintroduction .QUICKVIEW,
+main .introduction .picturesofintroduction .QUICKVIEW a {
   position: relative;
-  top: 400px;
-  width: 120px;
-  height: 50px;
-  color: white;
-  font-size: 0.8rem;
-  text-align: center;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
-@keyframes dissapear {
+main .introduction .picturesofintroduction .QUICKVIEW {
+  position: absolute;
+  top: 0px;
+  padding-bottom: 20px;
+}
+main .introduction .picturesofintroduction .QUICKVIEW a {
+  width: 120px;
+  height: 40px;
+  color: white;
+  background-color: black;
+  align-items: center;
+  font-size: 0.75rem;
+  font-family: Helvetica, Arial, sans-serif;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes disappear {
   0% {
     opacity: 1;
   }
@@ -169,10 +191,15 @@ main .introduction .picturesofintroduction div button {
     opacity: 0;
   }
 }
-main .introduction .picturesofintroduction .collar:hover {
-  animation-name: dissapear;
+.QUICKVIEW {
+  animation-name: disappear;
+  animation-duration: 700ms;
   animation-fill-mode: forwards;
-  animation-duration: 500ms;
+}
+.QUICKVIEW:hover {
+  animation-name: appear;
+  animation-duration: 700ms;
+  animation-fill-mode: forwards;
 }
 
 /* =======================Main introduction============================ */
