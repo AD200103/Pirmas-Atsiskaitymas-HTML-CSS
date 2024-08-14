@@ -16,12 +16,13 @@ body {
 .pagewrapper {
   width: 100%;
   height: fit-content;
-  padding-left: 3%;
-  padding-right: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 /* ============================HEADER================================== */
 header {
-  width: 100%;
+  width: 94%;
   height: 5.25vw;
   display: flex;
   align-items: center;
@@ -52,6 +53,7 @@ header h2 {
   font-size: calc((1.4 - 1) * 1.2vw + 1rem);
 }
 /* ============================HEADER================================== */
+/* =======================Main introduction============================ */
 main,
 main .introduction {
   width: 100%;
@@ -61,6 +63,8 @@ main .introduction {
 }
 main .introduction {
   margin-top: 4.5%;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 main .introduction h1 {
   width: fit-content;
@@ -89,7 +93,7 @@ main .introduction .introinfo h2 {
   font-size: calc((3.5 - 1) * 1.2vw + 1rem);
   line-height: calc((1.45em) * (1 + (1 - 3.5) / 25));
   font-weight: 400;
-  width: 40%;
+  width: 42%;
 }
 main .introduction .introinfo p {
   width: 32%;
@@ -109,4 +113,74 @@ main .introduction .introinfo p a {
   color: black;
   text-decoration: underline;
   text-underline-offset: 0.2em;
+}
+main .introduction .picturesofintroduction {
+  margin-top: 10.3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 102vh;
+  width: 100%;
+  gap: 13%;
+}
+main .introduction .picturesofintroduction .SecondDog,
+main .introduction .picturesofintroduction .collar {
+  width: 37.4%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+main .introduction .picturesofintroduction .collar {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+main .introduction .picturesofintroduction div {
+  width: 24%;
+  height: 73%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+main .introduction .picturesofintroduction div p {
+  width: 120px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.2em;
+  letter-spacing: 0.05em;
+}
+main .introduction .picturesofintroduction div button {
+  all: unset;
+  background-color: black;
+  position: relative;
+  top: 400px;
+  width: 120px;
+  height: 50px;
+  color: white;
+  font-size: 0.8rem;
+  text-align: center;
+}
+@keyframes dissapear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+main .introduction .picturesofintroduction .collar:hover {
+  animation-name: dissapear;
+  animation-fill-mode: forwards;
+  animation-duration: 500ms;
+}
+
+/* =======================Main introduction============================ */
+/* =========================Main products============================== */
+main .products {
+  padding: 0;
+  margin-top: 7%;
+  height: 102vh;
+  width: 100%;
+  background-color: #e6d8f9;
 }
