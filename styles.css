@@ -261,6 +261,44 @@ main .introduction .picturesofintroduction .QUICKVIEW a {
   }
   main .introduction .picturesofintroduction {
     flex-direction: column;
+    gap: 15px;
+    height: 140vw;
+    width: calc(94% - 6vw);
+    padding-top: 2vw;
+    padding-bottom: 4vw;
+  }
+  main .introduction .introinfo {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  main .introduction .picturesofintroduction .SecondDog {
+    width: 60%;
+    height: 300px;
+    align-self: flex-start;
+  }
+  main .introduction .picturesofintroduction .sidepicture {
+    width: 64%;
+    height: 70%;
+    align-self: flex-end;
+  }
+  main .introduction .picturesofintroduction .sidepicture .collar {
+    height: 100%;
+  }
+  main .introduction .introinfo h2,
+  main .introduction .introinfo p {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 456px) {
+  main .introduction .picturesofintroduction {
+    height: 638px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0;
+  }
+  main .introduction .introinfo {
+    height: fit-content;
   }
 }
 /* =========================PageAnimation============================== */
@@ -268,17 +306,6 @@ main .introduction .picturesofintroduction .QUICKVIEW a {
   animation-name: appear;
   animation-duration: 2s;
   animation-fill-mode: forwards;
-}
-@media only screen and (max-width: 768px) {
-  main .introduction .introinfo {
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  main .introduction .introinfo h2,
-  main .introduction .introinfo p {
-    width: 100%;
-  }
 }
 /* =========================PageAnimation============================== */
 /* =======================Main introduction============================ */
