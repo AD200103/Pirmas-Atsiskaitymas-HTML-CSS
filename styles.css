@@ -1,13 +1,13 @@
-@font-face {
-  font-family: "obviously";
-  src: url(Obviously-Regular.ttf);
-}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "obviously";
   text-decoration: none;
+}
+@font-face {
+  font-family: "obviously";
+  src: url(Obviously-Regular.ttf);
 }
 body {
   height: 620vh;
@@ -26,7 +26,7 @@ header {
   height: 5.25vw;
   display: flex;
   align-items: center;
-  border-bottom: solid 2px black;
+  border-bottom: solid 1px black;
   justify-content: space-between;
   padding-bottom: 8px;
 }
@@ -63,8 +63,6 @@ main .introduction {
 }
 main .introduction {
   margin-top: 4.5%;
-  padding-left: 3%;
-  padding-right: 3%;
 }
 main .introduction h1 {
   width: fit-content;
@@ -74,7 +72,7 @@ main .introduction h1 {
   text-align: center;
 }
 main .introduction .introsecimg {
-  width: 100%;
+  width: 94%;
   height: 40.3vw;
   border-radius: 60px;
   object-fit: cover;
@@ -82,12 +80,14 @@ main .introduction .introsecimg {
   margin-top: 0.2%;
 }
 main .introduction .introinfo {
+  padding-left: 3%;
+  padding-right: 3%;
   width: 100%;
-  height: 12vw;
+  height: 48vh;
   margin-top: 5.8%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 main .introduction .introinfo h2 {
   font-size: calc((3.5 - 1) * 1.2vw + 1rem);
@@ -96,14 +96,14 @@ main .introduction .introinfo h2 {
   width: 42%;
 }
 main .introduction .introinfo p {
-  width: 32%;
+  width: 32.5%;
   height: 100%;
   font-size: calc((0.9 - 1) * 1.2vw + 1rem);
   line-height: 1.4em;
   letter-spacing: 0.05em;
   display: flex;
   flex-direction: column;
-  gap: 8%;
+  gap: 5.5%;
   margin-right: 0.7%;
   margin-top: -0.5%;
 }
@@ -115,24 +115,24 @@ main .introduction .introinfo p a {
   text-underline-offset: 0.2em;
 }
 main .introduction .picturesofintroduction {
-  margin-top: 10.3%;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 102vh;
+  height: 52vw;
   width: 100%;
   gap: 13%;
 }
 main .introduction .picturesofintroduction .SecondDog,
 main .introduction .picturesofintroduction .collar {
-  width: 37.4%;
-  height: 100%;
+  width: 34%;
+  height: 94%;
   object-fit: cover;
   object-position: center;
 }
+
 main .introduction .picturesofintroduction .collar {
-  width: 100%;
   height: 100%;
+  width: 95%;
   position: relative;
 }
 main .introduction .picturesofintroduction .sidepicture {
@@ -156,7 +156,6 @@ main .introduction .picturesofintroduction .QUICKVIEW,
 main .introduction .picturesofintroduction .QUICKVIEW a {
   position: relative;
   width: 100%;
-  height: 90%;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -164,6 +163,7 @@ main .introduction .picturesofintroduction .QUICKVIEW a {
 main .introduction .picturesofintroduction .QUICKVIEW {
   position: absolute;
   top: 0px;
+  bottom: 50px;
   padding-bottom: 20px;
 }
 main .introduction .picturesofintroduction .QUICKVIEW a {
@@ -201,6 +201,13 @@ main .introduction .picturesofintroduction .QUICKVIEW a {
   animation-duration: 700ms;
   animation-fill-mode: forwards;
 }
+/* =========================PageAnimation============================== */
+.pagewrapper {
+  animation-name: appear;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+/* =========================PageAnimation============================== */
 
 /* =======================Main introduction============================ */
 /* =========================Main products============================== */
