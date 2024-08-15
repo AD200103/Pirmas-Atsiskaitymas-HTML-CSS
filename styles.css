@@ -23,10 +23,10 @@ body {
 /* ============================HEADER================================== */
 header {
   width: 94%;
-  height: 5.25vw;
+  height: calc(1.2vw + 3.9rem);
   display: flex;
   align-items: center;
-  border-bottom: solid 1px black;
+  border-bottom: solid 2px black;
   justify-content: space-between;
   padding-bottom: 8px;
 }
@@ -47,10 +47,48 @@ header nav {
 header a {
   gap: 5px;
 }
-header h2 {
+header a h2 {
+  font-size: calc((1.4 - 1) * 1.2vw + 1rem);
   margin-top: 4px;
   font-weight: 100;
-  font-size: calc((1.4 - 1) * 1.2vw + 1rem);
+  letter-spacing: 0em;
+  text-align: center;
+}
+header .burger {
+  display: none;
+  width: 35px;
+  height: 35px;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+header .burger .lines {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
+@media only screen and (max-width: 1024px) {
+  header {
+    padding: 8.3vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    border-bottom: solid 1px black;
+  }
+  header nav {
+    display: none;
+  }
+  header .burger {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header {
+    padding-left: 0;
+    padding-right: 0;
+    width: calc(94% - 6vw);
+  }
+  header a h2 {
+    font-size: calc((1.4 - 1) * calc(0.012 * min(100vh, 900px)) + 1rem);
+  }
 }
 /* ============================HEADER================================== */
 /* =======================Main introduction============================ */
@@ -65,11 +103,12 @@ main .introduction {
   margin-top: 4.5%;
 }
 main .introduction h1 {
-  width: fit-content;
   font-size: calc((4.8 - 1) * 1.2vw + 1rem);
   line-height: calc(1.45em * (1 + (1 - 4.8) / 25));
   font-weight: 400;
   text-align: center;
+  width: 94%;
+  word-wrap: break-word;
 }
 main .introduction .introsecimg {
   width: 94%;
@@ -83,8 +122,8 @@ main .introduction .introinfo {
   padding-left: 3%;
   padding-right: 3%;
   width: 100%;
-  height: 45vh;
-  margin-top: 5.8%;
+  height: 42vh;
+  margin-top: 6.2%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -125,7 +164,7 @@ main .introduction .picturesofintroduction {
 main .introduction .picturesofintroduction .SecondDog,
 main .introduction .picturesofintroduction .collar {
   width: 34%;
-  height: 94%;
+  height: 96%;
   object-fit: cover;
   object-position: center;
 }
@@ -136,7 +175,7 @@ main .introduction .picturesofintroduction .collar {
 }
 main .introduction .picturesofintroduction .sidepicture {
   width: 24%;
-  height: 73%;
+  height: 67%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -154,7 +193,7 @@ main .introduction .picturesofintroduction .sidepicture p {
 main .introduction .picturesofintroduction .QUICKVIEW,
 main .introduction .picturesofintroduction .QUICKVIEW a {
   position: relative;
-  width: 100%;
+  width: 95%;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -200,14 +239,48 @@ main .introduction .picturesofintroduction .QUICKVIEW a {
   animation-duration: 700ms;
   animation-fill-mode: forwards;
 }
+@media only screen and (max-width: 768px) {
+  main .introduction .introsecimg {
+    width: 94%;
+    height: 250px;
+    margin-top: 20%;
+  }
+  main .introduction h1 {
+    font-size: calc((4.8 - 1) * calc(0.012 * min(100vh, 900px)) + 1rem);
+  }
+  /* main .introduction,
+  main .introduction .introinfo {
+    gap: 10vw;
+  } */
+  main .introduction .introsecimg,
+  main .introduction h1,
+  main .introduction .introinfo {
+    padding-left: 0;
+    padding-right: 0;
+    width: calc(94% - 6vw);
+  }
+  main .introduction .picturesofintroduction {
+    flex-direction: column;
+  }
+}
 /* =========================PageAnimation============================== */
 .pagewrapper {
   animation-name: appear;
-  animation-duration: 4s;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
 }
+@media only screen and (max-width: 768px) {
+  main .introduction .introinfo {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  main .introduction .introinfo h2,
+  main .introduction .introinfo p {
+    width: 100%;
+  }
+}
 /* =========================PageAnimation============================== */
-
 /* =======================Main introduction============================ */
 /* =========================Main products============================== */
 main .products {
