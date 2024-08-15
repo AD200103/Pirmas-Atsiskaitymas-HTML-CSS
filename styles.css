@@ -83,7 +83,7 @@ main .introduction .introinfo {
   padding-left: 3%;
   padding-right: 3%;
   width: 100%;
-  height: 48vh;
+  height: 45vh;
   margin-top: 5.8%;
   display: flex;
   justify-content: space-between;
@@ -129,7 +129,6 @@ main .introduction .picturesofintroduction .collar {
   object-fit: cover;
   object-position: center;
 }
-
 main .introduction .picturesofintroduction .collar {
   height: 100%;
   width: 95%;
