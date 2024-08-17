@@ -100,6 +100,7 @@ header .burger .lines {
 }
 /* =========================HeaderAnimation============================ */
 /* ============================HEADER================================== */
+
 /* =======================Main introduction============================ */
 main,
 main .introduction {
@@ -318,9 +319,89 @@ main .introduction .picturesofintroduction .QUICKVIEW a {
 /* =======================Main introduction============================ */
 /* =========================Main products============================== */
 main .products {
-  padding: 0;
+  padding-right: 3%;
+  padding-left: 3%;
+  padding-top: 6.6vmax;
+  padding-bottom: 6.6vmax;
   margin-top: 7%;
-  height: 102vh;
+  height: 52vw;
   width: 100%;
   background-color: #e6d8f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .products ul,
+main .products ul li {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .products ul li {
+  flex-direction: column;
+  width: 30%;
+}
+main .products ul li .firstcollar {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+main .products ul div {
+  font-size: calc((1.2 - 1) * 1.2vw + 1rem);
+}
+main .products ul li h2 {
+  font-size: calc((1.5 - 1) * 1.2vw + 1rem);
+  font-weight: lighter;
+  text-align: center;
+}
+main .products ul .infounderpic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+main .products ul button {
+  all: unset;
+  width: 150px;
+  padding-top: 5px;
+  min-height: 40px;
+  background-color: transparent;
+  border: solid 2px black;
+  border-radius: 5px;
+  text-align: center;
+  font-size: calc((0.9 - 1) * 1.2vw + 1rem);
+  font-weight: 600;
+}
+@media only screen and (max-width: 992px) {
+  main .products {
+    height: calc(118px + 59vw);
+  }
+  main .products ul li {
+    width: 40vw;
+    padding-bottom: 0;
+  }
+  main .products ul li .firstcollar {
+    height: 73%;
+  }
+  main .products ul li:last-child {
+    display: none;
+  }
+  main .products ul .infounderpic {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  main .products ul li {
+    width: 100%;
+  }
+  main .products ul li:not(:first-child) {
+    display: none;
+  }
 }
