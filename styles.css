@@ -319,6 +319,7 @@ main .introduction .picturesofintroduction .QUICKVIEW a {
 /* =======================Main introduction============================ */
 /* =========================Main products============================== */
 main .products {
+  position: relative;
   padding-right: 3%;
   padding-left: 3%;
   padding-top: 6.6vmax;
@@ -353,7 +354,7 @@ main .products ul li .firstcollar {
   object-position: center;
   object-fit: cover;
 }
-main .products ul li .firstcollar:last-child {
+main .products ul .thirdproduct .firstcollar {
   object-position: 50.9301% 100%;
 }
 main .products ul div {
@@ -393,6 +394,27 @@ main .products ul button:hover {
   font-weight: lighter;
   transition-duration: 500ms;
 }
+main .products ul .arrowtotherightbtn {
+  all: unset;
+  background-color: black;
+  opacity: 0.7;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  right: 37px;
+  top: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .products ul .arrowtotherightbtn:hover {
+  opacity: 1;
+}
+main .products ul .arrowtotheright {
+  width: 36px;
+  height: 40px;
+}
 @media only screen and (min-width: 992px) and (max-width: 1190px) {
   main .products ul li .firstcollar {
     height: 67.3%;
@@ -423,6 +445,9 @@ main .products ul button:hover {
   }
 }
 @media only screen and (max-width: 576px) {
+  main .products {
+    height: calc(360px + 75vw);
+  }
   main .products ul li {
     width: 100%;
   }
