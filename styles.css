@@ -21,6 +21,68 @@ body {
   flex-direction: column;
   align-items: center;
 }
+/* SSSSSSSSSSSSSSSSSSSSSSSSquareSpaceButtonSSSSSSSSSSSSSSSSSSSSSSSS  */
+.pagewrapper a .squarespacebutton {
+  background-image: url(logo..svg);
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  width: 243px;
+  height: 76px;
+  right: 11px;
+  top: 87.9%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+.pagewrapper a .squarespacebutton .foranimation {
+  width: 729px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 243px);
+  grid-template-rows: 1fr;
+}
+.pagewrapper a .squarspacelogo {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.pagewrapper a .squarespacebutton .foranimation .greybox {
+  background-color: white;
+  opacity: 0.2;
+}
+@keyframes onhover {
+  0% {
+  }
+  100% {
+    transform: translateX(243px);
+  }
+}
+@keyframes offhover {
+  0% {
+    transform: translateX(243px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.pagewrapper a .squarespacebutton .foranimation {
+  animation-name: offhover;
+  animation-timing-function: linear;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards;
+}
+.pagewrapper a .squarespacebutton .foranimation:hover {
+  animation-name: onhover;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+/* SSSSSSSSSSSSSSSSSSSSSSSSquareSpaceButtonSSSSSSSSSSSSSSSSSSSSSSSS  */
+
 /* =========================PageAnimation============================== */
 .pagewrapper {
   animation-name: appear;
@@ -29,7 +91,7 @@ body {
 }
 /* =========================PageAnimation============================== */
 
-/* ============================HEADER================================== */
+/* ============================HEADER================================================================== */
 header {
   width: 94%;
   height: calc(1.2vw + 3.9rem);
@@ -101,8 +163,9 @@ header .burger .lines {
   }
 }
 /* =========================HeaderAnimation============================ */
-/* ============================HEADER================================== */
+/* ============================HEADER================================================================== */
 
+/* ============================Main==================================================================== */
 /* =======================Main introduction============================ */
 main,
 main .introduction {
@@ -410,6 +473,7 @@ main .products ul .arrowtotherightbtn {
   justify-content: center;
 }
 main .products ul .arrowtotherightbtn:hover {
+  cursor: pointer;
   opacity: 1;
 }
 main .products ul .arrowtotherightbtn .arrowtotheright {
@@ -493,3 +557,7 @@ main .products ul .firstproduct .buttonsRL button img {
 /* =========================Main products============================== */
 
 /* =========================Main feedback============================== */
+
+/* =========================Main feedback============================== */
+
+/* ============================Main==================================================================== */
