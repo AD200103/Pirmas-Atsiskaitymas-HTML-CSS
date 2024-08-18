@@ -557,6 +557,102 @@ main .products ul .firstproduct .buttonsRL button img {
 /* =========================Main products============================== */
 
 /* =========================Main feedback============================== */
+main .feedback {
+  width: 100%;
+  height: calc(269px + 27.8vw);
+  background-color: white;
+  padding-top: 7.3vmax;
+  padding-bottom: 7.5vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+main .feedback h2 {
+  font-size: calc((3.5 - 1) * 1.2vw + 1rem);
+  letter-spacing: 0em;
+  line-height: 1.4em;
+  font-weight: 400;
+}
+main .feedback .dogpainting {
+  object-fit: cover;
+  object-position: center;
+  width: 13%;
+  height: 20%;
+}
+main .feedback .paragraphforfeedback {
+  width: 58%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .feedback .paragraphforfeedback h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  word-break: break-all;
+  line-height: calc(1.45em * (1 + (1 - 3.5) / 25));
+}
+main .feedback .paragraphforfeedback p {
+  font-size: calc((1.2 - 1) * 1.2vw + 1rem);
+  line-height: 1.4em;
+  margin-top: 20px;
+}
+main .feedback .BIGbuttonsRL {
+  display: flex;
+  gap: 20px;
+}
+main .feedback .BIGbuttonsRL .arrowtotherightbtn,
+main .feedback .SMALLbuttonsRL button {
+  all: unset;
+  background-color: black;
+  opacity: 0.7;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .feedback .BIGbuttonsRL .arrowtotherightbtn:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+main .feedback .BIGbuttonsRL .arrowtotherightbtn .arrowtotheright {
+  width: 36px;
+  height: 36px;
+}
+main .feedback .SMALLbuttonsRL {
+  width: 100px;
+  height: fit-content;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+main .feedback .SMALLbuttonsRL button {
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+}
+main .feedback .SMALLbuttonsRL button img {
+  width: 20px;
+  height: 20px;
+}
+@media only screen and (max-width: 745px) and (min-width: 574px) {
+  main .feedback {
+    height: calc(510px - 2vw);
+  }
+}
+@media only screen and (max-width: 574px) {
+  main .feedback .BIGbuttonsRL {
+    display: none;
+  }
+  main .feedback .SMALLbuttonsRL {
+    display: flex;
+  }
+}
 
 /* =========================Main feedback============================== */
 
