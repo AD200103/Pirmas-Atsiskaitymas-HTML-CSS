@@ -4,6 +4,7 @@
   padding: 0;
   font-family: "obviously";
   text-decoration: none;
+  color: black;
 }
 @font-face {
   font-family: "obviously";
@@ -27,6 +28,7 @@ body {
   animation-fill-mode: forwards;
 }
 /* =========================PageAnimation============================== */
+
 /* ============================HEADER================================== */
 header {
   width: 94%;
@@ -317,6 +319,7 @@ main .introduction .picturesofintroduction .QUICKVIEW a {
 }
 /* =========================IntroductionAnimation====================== */
 /* =======================Main introduction============================ */
+
 /* =========================Main products============================== */
 main .products {
   position: relative;
@@ -345,19 +348,16 @@ main .products ul li {
   flex-direction: column;
   width: 30%;
 }
-main .products ul {
-  height: 100%;
-}
 main .products ul li .firstcollar {
   width: 100%;
   height: 72%;
   object-position: center;
   object-fit: cover;
 }
-main .products ul .thirdproduct .firstcollar {
+main .products ul li:last-child .firstcollar {
   object-position: 50.9301% 100%;
 }
-main .products ul div {
+main .products ul li div {
   font-size: calc((1.2 - 1) * 1.2vw + 1rem);
 }
 main .products ul li h2 {
@@ -365,7 +365,7 @@ main .products ul li h2 {
   font-weight: lighter;
   text-align: center;
 }
-main .products ul .infounderpic {
+main .products ul li .infounderpic {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -373,7 +373,8 @@ main .products ul .infounderpic {
   margin-top: 13px;
   margin-bottom: 13px;
 }
-main .products ul button {
+
+main .products ul li button {
   all: unset;
   width: fit-content;
   padding-right: 15px;
@@ -387,7 +388,7 @@ main .products ul button {
   font-size: calc((0.9 - 1) * 1.2vw + 1rem);
   font-weight: 600;
 }
-main .products ul button:hover {
+main .products ul li button:hover {
   background-color: black;
   color: #e6d8f9;
   cursor: pointer;
@@ -411,15 +412,33 @@ main .products ul .arrowtotherightbtn {
 main .products ul .arrowtotherightbtn:hover {
   opacity: 1;
 }
-main .products ul .arrowtotheright {
+main .products ul .arrowtotherightbtn .arrowtotheright {
   width: 36px;
   height: 40px;
 }
+main .products ul .firstproduct .buttonsRL button {
+  position: static;
+  width: 40px;
+  height: 40px;
+}
+main .products ul .firstproduct .buttonsRL {
+  width: 100px;
+  height: fit-content;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+main .products ul .firstproduct .buttonsRL button img {
+  width: 20px;
+  height: 20px;
+}
+/* =========================Products Animation========================= */
 @media only screen and (min-width: 992px) and (max-width: 1190px) {
   main .products ul li .firstcollar {
     height: 67.3%;
   }
-  main .products ul .infounderpic {
+  main .products ul li .infounderpic {
     gap: 10px;
     margin-top: 12px;
     margin-bottom: 12px;
@@ -431,7 +450,6 @@ main .products ul .arrowtotheright {
   }
   main .products ul li {
     width: 40vw;
-    padding-bottom: 0;
   }
   main .products ul li .firstcollar {
     height: 73%;
@@ -439,7 +457,7 @@ main .products ul .arrowtotheright {
   main .products ul li:last-child {
     display: none;
   }
-  main .products ul .infounderpic {
+  main .products ul li .infounderpic {
     margin-top: 15px;
     margin-bottom: 15px;
   }
@@ -448,10 +466,30 @@ main .products ul .arrowtotheright {
   main .products {
     height: calc(360px + 75vw);
   }
-  main .products ul li {
-    width: 100%;
+  main .products ul .arrowtotherightbtn {
+    display: none;
   }
   main .products ul li:not(:first-child) {
     display: none;
   }
+  main .products ul li {
+    justify-content: top;
+    gap: 15px;
+    width: 100%;
+  }
+  main .products ul li .infounderpic {
+    gap: 10px;
+    margin: 0;
+  }
+  main .products ul .firstproduct .buttonsRL {
+    display: flex;
+  }
+  main .products ul .firstproduct .buttonsRL button {
+    display: flex;
+    opacity: 1;
+  }
 }
+/* =========================Products Animation========================= */
+/* =========================Main products============================== */
+
+/* =========================Main feedback============================== */
