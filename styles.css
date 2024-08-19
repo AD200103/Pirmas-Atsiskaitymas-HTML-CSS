@@ -589,14 +589,16 @@ main .feedback .paragraphforfeedback {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-wrap: break-word;
 }
 main .feedback .paragraphforfeedback h3 {
   font-size: 1rem;
   font-weight: 400;
-  word-break: break-all;
+  width: 100%;
   line-height: calc(1.45em * (1 + (1 - 3.5) / 25));
 }
 main .feedback .paragraphforfeedback p {
+  width: 100%;
   font-size: calc((1.2 - 1) * 1.2vw + 1rem);
   line-height: 1.4em;
   margin-top: 20px;
@@ -674,6 +676,9 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 3.3vmax;
+  padding-bottom: 3.3vmax;
+  overflow-wrap: break-word;
 }
 /* =========================Footer Instagram============================ */
 footer .instagram {
@@ -683,35 +688,35 @@ footer .instagram {
   flex-direction: column;
   align-items: center;
   gap: calc(10px + 4.1vw);
-  padding-top: 3.3vmax;
-  padding-bottom: 3.3vmax;
   padding-left: 3vw;
   padding-right: 3vw;
-  overflow: hidden;
 }
 footer .instagram .titleinstagram {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 footer .instagram .titleinstagram h2 {
+  width: 100%;
   font-size: calc((3.5 - 1) * 1.2vw + 1rem);
   line-height: calc(1.45em * (1 + (1 - 3.5) / 25));
   font-weight: 400;
   margin-top: 17px;
   margin-bottom: 20px;
-  display: flex;
+  text-align: center;
 }
 footer .instagram .titleinstagram h2 a {
-  margin-left: 0px;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2em;
   cursor: pointer;
 }
 footer .instagram .titleinstagram p {
+  width: 100%;
   font-size: calc((1 - 1) * 1.2vw + 1rem);
   letter-spacing: 0.05em;
+  text-align: center;
 }
 footer .instagram .instaPictures {
   display: grid;
@@ -726,13 +731,24 @@ footer .instagram .InstagramSecPics {
   width: 100%;
   border-radius: 40px;
 }
+/* =========================Footer Instagram Animation================= */
 @media only screen and (max-width: 768px) {
   footer {
     width: calc(94% - 6vw);
+    overflow-wrap: break-word;
   }
   footer .instagram {
     padding-left: 0;
     padding-right: 0;
+    justify-content: space-evenly;
+  }
+  footer .instagram .titleinstagram {
+    height: 164px;
+    justify-content: center;
+  }
+  footer .instagram .titleinstagram h2 {
+    font-size: calc(2.1875rem + 0.1vw);
+    line-height: calc(1.45em * (1 + (1 - 3.5) / 25));
   }
   footer .instagram .instaPictures {
     grid-template-columns: repeat(2, 1fr);
@@ -742,4 +758,15 @@ footer .instagram .InstagramSecPics {
     height: 164px;
   }
 }
+@media only screen and (max-width: 768px) and (min-width: 312px) {
+  footer .instagram {
+    height: 549px;
+  }
+}
+@media only screen and (max-width: 312px) {
+  footer .instagram {
+    height: calc(806px - 81vw);
+  }
+}
+/* =========================Footer Instagram Animation================== */
 /* =========================Footer Instagram============================ */
