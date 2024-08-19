@@ -671,7 +671,75 @@ main .feedback .SMALLbuttonsRL button img {
 footer {
   width: 100%;
   height: 122vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 /* =========================Footer Instagram============================ */
-
+footer .instagram {
+  width: 100%;
+  height: calc(124px + 35vw);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(10px + 4.1vw);
+  padding-top: 3.3vmax;
+  padding-bottom: 3.3vmax;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  overflow: hidden;
+}
+footer .instagram .titleinstagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .instagram .titleinstagram h2 {
+  font-size: calc((3.5 - 1) * 1.2vw + 1rem);
+  line-height: calc(1.45em * (1 + (1 - 3.5) / 25));
+  font-weight: 400;
+  margin-top: 17px;
+  margin-bottom: 20px;
+  display: flex;
+}
+footer .instagram .titleinstagram h2 a {
+  margin-left: 0px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+}
+footer .instagram .titleinstagram p {
+  font-size: calc((1 - 1) * 1.2vw + 1rem);
+  letter-spacing: 0.05em;
+}
+footer .instagram .instaPictures {
+  display: grid;
+  gap: 11px;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+}
+footer .instagram .InstagramSecPics {
+  object-fit: cover;
+  object-position: center;
+  height: calc(76px + 16.3vw);
+  width: 100%;
+  border-radius: 40px;
+}
+@media only screen and (max-width: 768px) {
+  footer {
+    width: calc(94% - 6vw);
+  }
+  footer .instagram {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  footer .instagram .instaPictures {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  footer .instagram .InstagramSecPics {
+    height: 164px;
+  }
+}
 /* =========================Footer Instagram============================ */
