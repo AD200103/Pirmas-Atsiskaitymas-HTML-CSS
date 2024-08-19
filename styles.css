@@ -11,7 +11,7 @@
   src: url(Obviously-Regular.ttf);
 }
 body {
-  height: 620vh;
+  /* height: 620vh; */
   background-color: #ffe8ba;
 }
 .pagewrapper {
@@ -563,6 +563,8 @@ main .feedback {
   background-color: white;
   padding-top: 7.3vmax;
   padding-bottom: 7.5vmax;
+  padding-left: 3vw;
+  padding-right: 3vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -640,12 +642,20 @@ main .feedback .SMALLbuttonsRL button img {
   width: 20px;
   height: 20px;
 }
+/* =========================Feedback Animation========================= */
 @media only screen and (max-width: 745px) and (min-width: 574px) {
   main .feedback {
-    height: calc(510px - 2vw);
+    height: calc(631px - 17.5vw);
   }
 }
 @media only screen and (max-width: 574px) {
+  main .feedback {
+    height: calc(730px - 35vw);
+  }
+  main .feedback .dogpainting {
+    width: 54px;
+    height: 94px;
+  }
   main .feedback .BIGbuttonsRL {
     display: none;
   }
@@ -653,7 +663,15 @@ main .feedback .SMALLbuttonsRL button img {
     display: flex;
   }
 }
-
+/* =========================Feedback Animation========================= */
 /* =========================Main feedback============================== */
-
 /* ============================Main==================================================================== */
+
+/* =========================Footer====================================== */
+footer {
+  width: 100%;
+  height: 122vh;
+}
+/* =========================Footer Instagram============================ */
+
+/* =========================Footer Instagram============================ */
