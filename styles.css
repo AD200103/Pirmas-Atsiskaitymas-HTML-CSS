@@ -672,10 +672,11 @@ main .feedback .SMALLbuttonsRL button img {
 /* =========================Footer====================================== */
 footer {
   width: 100%;
-  height: 122vh;
+  height: 122.4vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   padding-top: 3.3vmax;
   padding-bottom: 3.3vmax;
   overflow-wrap: break-word;
@@ -770,3 +771,143 @@ footer .instagram .InstagramSecPics {
 }
 /* =========================Footer Instagram Animation================== */
 /* =========================Footer Instagram============================ */
+footer .endfooter {
+  width: 100%;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  height: 100%;
+  padding-top: calc(16vmax / 3.05);
+  padding-bottom: calc(16vmax / 9);
+}
+footer .endfooter .footercomponents {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  background-color: #ffe8ba;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 20% 40% 40%;
+}
+footer .endfooter .footercomponents .westleypets {
+  grid-row: span 3;
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+footer .endfooter .footercomponents .westleypets h4 {
+  font-size: calc((1.4 - 1) * 1.2vw + 1rem);
+  line-height: calc(1.45em * (1 + (1 - 1.4) / 25));
+  font-weight: 400;
+}
+footer .endfooter .footercomponents .westleypets .socialmedia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  gap: 13px;
+  margin-bottom: 15px;
+}
+footer .endfooter .footercomponents .westleypets p {
+  font-size: calc((0.8 - 1) * 1.2vw + 1rem);
+  line-height: 1.4em;
+  letter-spacing: 0.05em;
+}
+footer .endfooter .footercomponents .contactlist {
+  grid-column: 2;
+  grid-row: 3;
+  display: flex;
+}
+footer .endfooter .footercomponents .contactlist ul {
+  list-style: none;
+  height: 100%;
+  font-size: calc((0.9 - 1) * 1.2vw + 1rem);
+  letter-spacing: 0.05em;
+  line-height: 1.4em;
+  margin-left: 60px;
+}
+footer .endfooter .footercomponents .contactlist ul a,
+footer .endfooter .footercomponents .westleypets p a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+footer .endfooter .footercomponents .getupdates {
+  grid-column: 3;
+  grid-row: 2;
+  display: flex;
+}
+footer .endfooter .footercomponents .getupdates p {
+  font-size: calc((0.9 - 1) * 1.2vw + 1rem);
+  letter-spacing: 0.05em;
+  line-height: 1.4em;
+}
+footer .endfooter .footercomponents .searchbarAndButton {
+  grid-column: 3;
+  grid-row: 3;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .endfooter .footercomponents .searchbarAndButton input[type="email"] {
+  all: unset;
+  width: 220px;
+  background-color: white;
+  padding: 1.4rem 2rem;
+  font-size: calc((0.9 - 1) * 1.2vw + 1rem);
+  line-height: 1.2rem;
+  letter-spacing: 0.05em;
+}
+footer
+  .endfooter
+  .footercomponents
+  .searchbarAndButton
+  input[type="email"]::placeholder {
+  color: rgb(212, 206, 206);
+}
+footer
+  .endfooter
+  .footercomponents
+  .searchbarAndButton
+  input[type="email"]:focus {
+  outline: 2px solid rgb(0, 0, 0);
+  outline-offset: 2px;
+}
+footer .endfooter .footercomponents .searchbarAndButton input[type="email"] {
+  all: unset;
+  width: 220px;
+  background-color: white;
+  padding: 1.4rem 2rem;
+  font-size: calc((0.9 - 1) * 1.2vw + 1rem);
+  line-height: 1.2rem;
+  letter-spacing: 0.05em;
+}
+footer .endfooter .footercomponents .searchbarAndButton form {
+  display: flex;
+  gap: 10px;
+}
+footer .endfooter .footercomponents .searchbarAndButton form button {
+  all: unset;
+  width: 136.97px;
+  height: 64px;
+  text-align: center;
+  background-color: transparent;
+  border: 1.6px solid black;
+  border-radius: 6.4px;
+  letter-spacing: 0.02em;
+  line-height: 1.2rem;
+  font-weight: 600;
+  text-wrap: nowrap;
+}
+footer .endfooter .footercomponents .searchbarAndButton form button:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1245px) {
+  footer .endfooter .footercomponents {
+    grid-template-rows: 16% 28% 28% 28%;
+  }
+  footer .endfooter .footercomponents .searchbarAndButton form {
+    flex-direction: column;
+  }
+}
