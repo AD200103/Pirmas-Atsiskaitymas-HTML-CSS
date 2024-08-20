@@ -11,7 +11,6 @@
   src: url(Obviously-Regular.ttf);
 }
 body {
-  /* height: 620vh; */
   background-color: #ffe8ba;
 }
 .pagewrapper {
@@ -21,67 +20,6 @@ body {
   flex-direction: column;
   align-items: center;
 }
-/* SSSSSSSSSSSSSSSSSSSSSSSSquareSpaceButtonSSSSSSSSSSSSSSSSSSSSSSSS  */
-.pagewrapper a .squarespacebutton {
-  background-image: url(logo..svg);
-  background-position: center;
-  background-size: cover;
-  position: fixed;
-  width: 243px;
-  height: 76px;
-  right: 11px;
-  top: 87.9%;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  cursor: pointer;
-}
-.pagewrapper a .squarespacebutton .foranimation {
-  width: 729px;
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 243px);
-  grid-template-rows: 1fr;
-}
-.pagewrapper a .squarspacelogo {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-}
-.pagewrapper a .squarespacebutton .foranimation .greybox {
-  background-color: white;
-  opacity: 0.2;
-}
-@keyframes onhover {
-  0% {
-  }
-  100% {
-    transform: translateX(243px);
-  }
-}
-@keyframes offhover {
-  0% {
-    transform: translateX(243px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
-.pagewrapper a .squarespacebutton .foranimation {
-  animation-name: offhover;
-  animation-timing-function: linear;
-  animation-duration: 250ms;
-  animation-fill-mode: forwards;
-}
-.pagewrapper a .squarespacebutton .foranimation:hover {
-  animation-name: onhover;
-  animation-duration: 250ms;
-  animation-fill-mode: forwards;
-  animation-timing-function: linear;
-}
-/* SSSSSSSSSSSSSSSSSSSSSSSSquareSpaceButtonSSSSSSSSSSSSSSSSSSSSSSSS  */
 
 /* =========================PageAnimation============================== */
 .pagewrapper {
@@ -669,14 +607,14 @@ main .feedback .SMALLbuttonsRL button img {
 /* =========================Main feedback============================== */
 /* ============================Main==================================================================== */
 
-/* =========================Footer====================================== */
+/* =========================Footer===================================================================== */
 footer {
   width: 100%;
-  height: 122.4vh;
+  height: 57.4vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  gap: 57px;
   padding-top: 3.3vmax;
   padding-bottom: 3.3vmax;
   overflow-wrap: break-word;
@@ -684,7 +622,6 @@ footer {
 /* =========================Footer Instagram============================ */
 footer .instagram {
   width: 100%;
-  height: calc(124px + 35vw);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -771,13 +708,15 @@ footer .instagram .InstagramSecPics {
 }
 /* =========================Footer Instagram Animation================== */
 /* =========================Footer Instagram============================ */
+
+/* =========================Footer Endfooter============================ */
 footer .endfooter {
   width: 100%;
   padding-left: 3vw;
   padding-right: 3vw;
-  height: 100%;
-  padding-top: calc(16vmax / 3.05);
-  padding-bottom: calc(16vmax / 9);
+  height: calc(244.8px + 0.01vw);
+  padding-top: calc(16vmax / 10);
+  padding-bottom: calc(16vmax / 3.1);
 }
 footer .endfooter .footercomponents {
   width: 100%;
@@ -815,8 +754,9 @@ footer .endfooter .footercomponents .westleypets p {
 }
 footer .endfooter .footercomponents .contactlist {
   grid-column: 2;
-  grid-row: 3;
-  display: flex;
+  grid-row: span 3;
+  display: grid;
+  grid-template-rows: repeat(20, 1fr);
 }
 footer .endfooter .footercomponents .contactlist ul {
   list-style: none;
@@ -825,6 +765,7 @@ footer .endfooter .footercomponents .contactlist ul {
   letter-spacing: 0.05em;
   line-height: 1.4em;
   margin-left: 60px;
+  grid-row: 19;
 }
 footer .endfooter .footercomponents .contactlist ul a,
 footer .endfooter .footercomponents .westleypets p a {
@@ -832,34 +773,31 @@ footer .endfooter .footercomponents .westleypets p a {
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2em;
 }
-footer .endfooter .footercomponents .getupdates {
+footer .endfooter .footercomponents .finalgrid {
   grid-column: 3;
-  grid-row: 2;
+  grid-row: span 3;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(20, 1fr);
+}
+footer .endfooter .footercomponents .finalgrid .getupdates {
+  grid-row-start: 5;
   display: flex;
 }
-footer .endfooter .footercomponents .getupdates p {
+footer .endfooter .footercomponents .finalgrid .getupdates p {
   font-size: calc((0.9 - 1) * 1.2vw + 1rem);
   letter-spacing: 0.05em;
   line-height: 1.4em;
 }
-footer .endfooter .footercomponents .searchbarAndButton {
-  grid-column: 3;
-  grid-row: 3;
+footer .endfooter .footercomponents .finalgrid .searchbarAndButton {
   justify-content: space-between;
   align-items: center;
-}
-footer .endfooter .footercomponents .searchbarAndButton input[type="email"] {
-  all: unset;
-  width: 220px;
-  background-color: white;
-  padding: 1.4rem 2rem;
-  font-size: calc((0.9 - 1) * 1.2vw + 1rem);
-  line-height: 1.2rem;
-  letter-spacing: 0.05em;
+  grid-row-start: 19;
 }
 footer
   .endfooter
   .footercomponents
+  .finalgrid
   .searchbarAndButton
   input[type="email"]::placeholder {
   color: rgb(212, 206, 206);
@@ -867,12 +805,18 @@ footer
 footer
   .endfooter
   .footercomponents
+  .finalgrid
   .searchbarAndButton
   input[type="email"]:focus {
   outline: 2px solid rgb(0, 0, 0);
   outline-offset: 2px;
 }
-footer .endfooter .footercomponents .searchbarAndButton input[type="email"] {
+footer
+  .endfooter
+  .footercomponents
+  .finalgrid
+  .searchbarAndButton
+  input[type="email"] {
   all: unset;
   width: 220px;
   background-color: white;
@@ -881,11 +825,12 @@ footer .endfooter .footercomponents .searchbarAndButton input[type="email"] {
   line-height: 1.2rem;
   letter-spacing: 0.05em;
 }
-footer .endfooter .footercomponents .searchbarAndButton form {
+footer .endfooter .footercomponents .finalgrid .searchbarAndButton form {
+  grid-row-start: 15;
   display: flex;
   gap: 10px;
 }
-footer .endfooter .footercomponents .searchbarAndButton form button {
+footer .endfooter .footercomponents .finalgrid .searchbarAndButton form button {
   all: unset;
   width: 136.97px;
   height: 64px;
@@ -898,16 +843,149 @@ footer .endfooter .footercomponents .searchbarAndButton form button {
   font-weight: 600;
   text-wrap: nowrap;
 }
-footer .endfooter .footercomponents .searchbarAndButton form button:hover {
+footer
+  .endfooter
+  .footercomponents
+  .finalgrid
+  .searchbarAndButton
+  form
+  button:hover {
   color: white;
   background-color: black;
   cursor: pointer;
 }
-@media only screen and (max-width: 1245px) {
-  footer .endfooter .footercomponents {
-    grid-template-rows: 16% 28% 28% 28%;
+/* =========================EndfooterAnimation========================== */
+@media only screen and (max-width: 768px) {
+  footer {
+    height: 1000px;
+    gap: 10px;
   }
-  footer .endfooter .footercomponents .searchbarAndButton form {
+  footer .endfooter .footercomponents {
+    height: 350px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  footer .endfooter .footercomponents .westleypets {
+    grid-column: span 3;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+  }
+  footer .endfooter .footercomponents .westleypets h4 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  footer .endfooter .footercomponents .westleypets .socialmedia {
+    grid-column: 2;
+    grid-row: 1;
+    margin-left: 5px;
+  }
+  footer .endfooter .footercomponents .westleypets p {
+    grid-column: 2;
+    grid-row: 2;
+    overflow-wrap: break-word;
+  }
+  footer .endfooter .footercomponents .finalgrid {
+    grid-column: span 3;
+    grid-row: 3;
+    display: block;
+  }
+  footer .endfooter .footercomponents .finalgrid .searchbarAndButton form {
     flex-direction: column;
   }
+  footer
+    .endfooter
+    .footercomponents
+    .finalgrid
+    .searchbarAndButton
+    form
+    input[type="email"] {
+    width: 60%;
+  }
+  footer .endfooter .footercomponents .contactlist {
+    grid-row: 2;
+    grid-column: 1;
+    display: block;
+    height: 50px;
+  }
+  footer .endfooter .footercomponents .contactlist ul {
+    margin: 0;
+  }
 }
+@media only screen and (max-width: 326px) {
+  footer .endfooter .footercomponents {
+    height: calc(750px - 100vw);
+    padding-bottom: 50px;
+  }
+}
+@media only screen and (max-width: 225px) {
+  footer .endfooter .footercomponents .westleypets p {
+    word-break: break-all;
+  }
+}
+/* =========================EndfooterAnimation========================== */
+/* =========================Footer Endfooter============================ */
+/* =========================Footer===================================================================== */
+
+/* SSSSSSSSSSSSSSSSSSSSSSSSquareSpaceButtonSSSSSSSSSSSSSSSSSSSSSSSS  */
+.pagewrapper a .squarespacebutton {
+  background-image: url(logo..svg);
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  width: 243px;
+  height: 76px;
+  right: 11px;
+  top: 87.9%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+.pagewrapper a .squarespacebutton .foranimation {
+  width: 729px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 243px);
+  grid-template-rows: 1fr;
+}
+.pagewrapper a .squarspacelogo {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.pagewrapper a .squarespacebutton .foranimation .greybox {
+  background-color: white;
+  opacity: 0.2;
+}
+@keyframes onhover {
+  0% {
+  }
+  100% {
+    transform: translateX(243px);
+  }
+}
+@keyframes offhover {
+  0% {
+    transform: translateX(243px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.pagewrapper a .squarespacebutton .foranimation {
+  animation-name: offhover;
+  animation-timing-function: linear;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards;
+}
+.pagewrapper a .squarespacebutton .foranimation:hover {
+  animation-name: onhover;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+/* SSSSSSSSSSSSSSSSSSSSSSSSquareSpaceButtonSSSSSSSSSSSSSSSSSSSSSSSS  */
