@@ -13,7 +13,7 @@
 body {
   background-color: #ffe8ba;
 }
-.pagewrapper {
+.page-wrapper {
   width: 100%;
   height: fit-content;
   display: flex;
@@ -22,7 +22,7 @@ body {
 }
 
 /* =========================PageAnimation============================== */
-.pagewrapper {
+.page-wrapper {
   animation-name: appear;
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -123,7 +123,7 @@ main .introduction h1 {
   width: 94%;
   word-wrap: break-word;
 }
-main .introduction .introsecimg {
+main .introduction .intro-sec-img {
   width: 94%;
   height: 40.3vw;
   border-radius: 60px;
@@ -131,7 +131,7 @@ main .introduction .introsecimg {
   object-position: center;
   margin-top: 0.2%;
 }
-main .introduction .introinfo {
+main .introduction .intro-info {
   padding-left: 3%;
   padding-right: 3%;
   width: 100%;
@@ -141,13 +141,13 @@ main .introduction .introinfo {
   justify-content: space-between;
   align-items: flex-start;
 }
-main .introduction .introinfo h2 {
+main .introduction .intro-info h2 {
   font-size: calc((3.5 - 1) * 1.2vw + 1rem);
   line-height: calc((1.45em) * (1 + (1 - 3.5) / 25));
   font-weight: 400;
   width: 42%;
 }
-main .introduction .introinfo p {
+main .introduction .intro-info p {
   width: 32.5%;
   height: 100%;
   font-size: calc((0.9 - 1) * 1.2vw + 1rem);
@@ -159,14 +159,14 @@ main .introduction .introinfo p {
   margin-right: 0.7%;
   margin-top: -0.5%;
 }
-main .introduction .introinfo p a {
+main .introduction .intro-info p a {
   width: fit-content;
   line-height: 1.4em;
   color: black;
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }
-main .introduction .picturesofintroduction {
+main .introduction .pictures-of-introduction {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -174,19 +174,19 @@ main .introduction .picturesofintroduction {
   width: 100%;
   gap: 13%;
 }
-main .introduction .picturesofintroduction .SecondDog,
-main .introduction .picturesofintroduction .collar {
+main .introduction .pictures-of-introduction .second-dog,
+main .introduction .pictures-of-introduction .collar {
   width: 34%;
   height: 96%;
   object-fit: cover;
   object-position: center;
 }
-main .introduction .picturesofintroduction .collar {
+main .introduction .pictures-of-introduction .collar {
   height: 100%;
   width: 95%;
   position: relative;
 }
-main .introduction .picturesofintroduction .sidepicture {
+main .introduction .pictures-of-introduction .side-picture {
   width: 24%;
   height: 67%;
   display: flex;
@@ -196,28 +196,28 @@ main .introduction .picturesofintroduction .sidepicture {
   gap: 20px;
   position: relative;
 }
-main .introduction .picturesofintroduction .sidepicture p {
+main .introduction .pictures-of-introduction .side-picture p {
   width: 120px;
   text-align: center;
   font-size: 1rem;
   line-height: 1.2em;
   letter-spacing: 0.05em;
 }
-main .introduction .picturesofintroduction .QUICKVIEW,
-main .introduction .picturesofintroduction .QUICKVIEW a {
+main .introduction .pictures-of-introduction .quick-view,
+main .introduction .pictures-of-introduction .quick-view a {
   position: relative;
   width: 95%;
   display: flex;
   align-items: flex-end;
   justify-content: center;
 }
-main .introduction .picturesofintroduction .QUICKVIEW {
+main .introduction .pictures-of-introduction .quick-view {
   position: absolute;
   top: 0px;
   bottom: 50px;
   padding-bottom: 20px;
 }
-main .introduction .picturesofintroduction .QUICKVIEW a {
+main .introduction .pictures-of-introduction .quick-view a {
   width: 120px;
   height: 40px;
   color: white;
@@ -242,46 +242,46 @@ main .introduction .picturesofintroduction .QUICKVIEW a {
     opacity: 0;
   }
 }
-.QUICKVIEW {
+.quick-view {
   animation-name: disappear;
   animation-duration: 700ms;
   animation-fill-mode: forwards;
 }
-.QUICKVIEW:hover {
+.quick-view:hover {
   animation-name: appear;
   animation-duration: 700ms;
   animation-fill-mode: forwards;
 }
 /* =========================IntroductionAnimation====================== */
 @media only screen and (max-width: 768px) {
-  main .introduction .introsecimg,
+  main .introduction .intro-sec-img,
   main .introduction h1,
-  main .introduction .introinfo {
+  main .introduction .intro-info {
     padding-left: 0;
     padding-right: 0;
     width: calc(94% - 6vw);
   }
-  main .introduction .introsecimg {
+  main .introduction .intro-sec-img {
     height: 250px;
     margin-top: 20%;
   }
   main .introduction h1 {
     font-size: 2.8125rem;
   }
-  main .introduction .introinfo {
+  main .introduction .intro-info {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     gap: 50px;
   }
-  main .introduction .introinfo h2,
-  main .introduction .introinfo p {
+  main .introduction .intro-info h2,
+  main .introduction .intro-info p {
     width: 100%;
   }
-  main .introduction .introinfo p {
+  main .introduction .intro-info p {
     gap: 15px;
   }
-  main .introduction .picturesofintroduction {
+  main .introduction .pictures-of-introduction {
     flex-direction: column;
     gap: 15px;
     height: 140vw;
@@ -289,32 +289,32 @@ main .introduction .picturesofintroduction .QUICKVIEW a {
     margin-top: calc((0.9 - 1) * 30vw + 3.5rem);
     margin-bottom: calc((0.9 - 1) * 30vw + 3.125rem);
   }
-  main .introduction .picturesofintroduction .SecondDog {
+  main .introduction .pictures-of-introduction .second-dog {
     width: 60%;
     height: 300px;
     align-self: flex-start;
   }
-  main .introduction .picturesofintroduction .sidepicture {
+  main .introduction .pictures-of-introduction .side-picture {
     width: 64%;
     height: 70%;
     align-self: flex-end;
   }
-  main .introduction .picturesofintroduction .sidepicture .collar {
+  main .introduction .pictures-of-introduction .side-picture .collar {
     height: 100%;
   }
 }
 @media only screen and (max-width: 456px) {
-  main .introduction .picturesofintroduction {
+  main .introduction .pictures-of-introduction {
     height: 638px;
     margin-top: 50px;
     margin-bottom: 50px;
   }
-  main .introduction .introinfo {
+  main .introduction .intro-info {
     height: fit-content;
   }
 }
 @media only screen and (max-width: 232px) {
-  main .introduction .introinfo {
+  main .introduction .intro-info {
     gap: 0;
   }
 }
@@ -349,13 +349,13 @@ main .products ul li {
   flex-direction: column;
   width: 30%;
 }
-main .products ul li .firstcollar {
+main .products ul li .first-collar {
   width: 100%;
   height: 72%;
   object-position: center;
   object-fit: cover;
 }
-main .products ul li:last-child .firstcollar {
+main .products ul li:last-child .first-collar {
   object-position: 50.9301% 100%;
 }
 main .products ul li div {
@@ -366,7 +366,7 @@ main .products ul li h2 {
   font-weight: lighter;
   text-align: center;
 }
-main .products ul li .infounderpic {
+main .products ul li .info-under-pic {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -396,7 +396,7 @@ main .products ul li button:hover {
   font-weight: lighter;
   transition-duration: 500ms;
 }
-main .products ul .arrowtotherightbtn {
+main .products ul .arrow-to-the-right-btn {
   all: unset;
   background-color: black;
   opacity: 0.7;
@@ -410,20 +410,20 @@ main .products ul .arrowtotherightbtn {
   align-items: center;
   justify-content: center;
 }
-main .products ul .arrowtotherightbtn:hover {
+main .products ul .arrow-to-the-right-btn:hover {
   cursor: pointer;
   opacity: 1;
 }
-main .products ul .arrowtotherightbtn .arrowtotheright {
+main .products ul .arrow-to-the-right-btn .arrow-to-the-right {
   width: 36px;
   height: 40px;
 }
-main .products ul .firstproduct .buttonsRL button {
+main .products ul .first-product .buttons-rl button {
   position: static;
   width: 40px;
   height: 40px;
 }
-main .products ul .firstproduct .buttonsRL {
+main .products ul .first-product .buttons-rl {
   width: 100px;
   height: fit-content;
   display: none;
@@ -431,16 +431,16 @@ main .products ul .firstproduct .buttonsRL {
   justify-content: space-between;
   gap: 15px;
 }
-main .products ul .firstproduct .buttonsRL button img {
+main .products ul .first-product .buttons-rl button img {
   width: 20px;
   height: 20px;
 }
 /* =========================Products Animation========================= */
 @media only screen and (min-width: 992px) and (max-width: 1190px) {
-  main .products ul li .firstcollar {
+  main .products ul li .first-collar {
     height: 67.3%;
   }
-  main .products ul li .infounderpic {
+  main .products ul li .info-under-pic {
     gap: 10px;
     margin-top: 12px;
     margin-bottom: 12px;
@@ -453,13 +453,13 @@ main .products ul .firstproduct .buttonsRL button img {
   main .products ul li {
     width: 40vw;
   }
-  main .products ul li .firstcollar {
+  main .products ul li .first-collar {
     height: 73%;
   }
   main .products ul li:last-child {
     display: none;
   }
-  main .products ul li .infounderpic {
+  main .products ul li .info-under-pic {
     margin-top: 15px;
     margin-bottom: 15px;
   }
@@ -468,7 +468,7 @@ main .products ul .firstproduct .buttonsRL button img {
   main .products {
     height: calc(360px + 75vw);
   }
-  main .products ul .arrowtotherightbtn {
+  main .products ul .arrow-to-the-right-btn {
     display: none;
   }
   main .products ul li:not(:first-child) {
@@ -479,14 +479,14 @@ main .products ul .firstproduct .buttonsRL button img {
     gap: 15px;
     width: 100%;
   }
-  main .products ul li .infounderpic {
+  main .products ul li .info-under-pic {
     gap: 10px;
     margin: 0;
   }
-  main .products ul .firstproduct .buttonsRL {
+  main .products ul .first-product .buttons-rl {
     display: flex;
   }
-  main .products ul .firstproduct .buttonsRL button {
+  main .products ul .first-product .buttons-rl button {
     display: flex;
     opacity: 1;
   }
@@ -515,13 +515,13 @@ main .feedback h2 {
   line-height: 1.4em;
   font-weight: 400;
 }
-main .feedback .dogpainting {
+main .feedback .dog-painting {
   object-fit: cover;
   object-position: center;
   width: 13%;
   height: 20%;
 }
-main .feedback .paragraphforfeedback {
+main .feedback .paragraph-for-feedback {
   width: 58%;
   height: fit-content;
   display: flex;
@@ -529,24 +529,24 @@ main .feedback .paragraphforfeedback {
   align-items: center;
   overflow-wrap: break-word;
 }
-main .feedback .paragraphforfeedback h3 {
+main .feedback .paragraph-for-feedback h3 {
   font-size: 1rem;
   font-weight: 400;
   width: 100%;
   line-height: calc(1.45em * (1 + (1 - 3.5) / 25));
 }
-main .feedback .paragraphforfeedback p {
+main .feedback .paragraph-for-feedback p {
   width: 100%;
   font-size: calc((1.2 - 1) * 1.2vw + 1rem);
   line-height: 1.4em;
   margin-top: 20px;
 }
-main .feedback .BIGbuttonsRL {
+main .feedback .big-buttons-rl {
   display: flex;
   gap: 20px;
 }
-main .feedback .BIGbuttonsRL .arrowtotherightbtn,
-main .feedback .SMALLbuttonsRL button {
+main .feedback .big-buttons-rl .arrow-to-the-right-btn,
+main .feedback .small-buttons-rl button {
   all: unset;
   background-color: black;
   opacity: 0.7;
@@ -557,15 +557,15 @@ main .feedback .SMALLbuttonsRL button {
   align-items: center;
   justify-content: center;
 }
-main .feedback .BIGbuttonsRL .arrowtotherightbtn:hover {
+main .feedback .big-buttons-rl .arrow-to-the-right-btn:hover {
   cursor: pointer;
   opacity: 1;
 }
-main .feedback .BIGbuttonsRL .arrowtotherightbtn .arrowtotheright {
+main .feedback .big-buttons-rl .arrow-to-the-right-btn .arrow-to-the-right {
   width: 36px;
   height: 36px;
 }
-main .feedback .SMALLbuttonsRL {
+main .feedback .small-buttons-rl {
   width: 100px;
   height: fit-content;
   display: none;
@@ -573,12 +573,12 @@ main .feedback .SMALLbuttonsRL {
   justify-content: space-between;
   gap: 15px;
 }
-main .feedback .SMALLbuttonsRL button {
+main .feedback .small-buttons-rl button {
   width: 40px;
   height: 40px;
   opacity: 1;
 }
-main .feedback .SMALLbuttonsRL button img {
+main .feedback .small-buttons-rl button img {
   width: 20px;
   height: 20px;
 }
@@ -592,14 +592,14 @@ main .feedback .SMALLbuttonsRL button img {
   main .feedback {
     height: calc(730px - 35vw);
   }
-  main .feedback .dogpainting {
+  main .feedback .dog-painting {
     width: 54px;
     height: 94px;
   }
-  main .feedback .BIGbuttonsRL {
+  main .feedback .big-buttons-rl {
     display: none;
   }
-  main .feedback .SMALLbuttonsRL {
+  main .feedback .small-buttons-rl {
     display: flex;
   }
 }
@@ -629,13 +629,13 @@ footer .instagram {
   padding-left: 3vw;
   padding-right: 3vw;
 }
-footer .instagram .titleinstagram {
+footer .instagram .title-instagram {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-footer .instagram .titleinstagram h2 {
+footer .instagram .title-instagram h2 {
   width: 100%;
   font-size: calc((3.5 - 1) * 1.2vw + 1rem);
   line-height: calc(1.45em * (1 + (1 - 3.5) / 25));
@@ -644,25 +644,25 @@ footer .instagram .titleinstagram h2 {
   margin-bottom: 20px;
   text-align: center;
 }
-footer .instagram .titleinstagram h2 a {
+footer .instagram .title-instagram h2 a {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2em;
   cursor: pointer;
 }
-footer .instagram .titleinstagram p {
+footer .instagram .title-instagram p {
   width: 100%;
   font-size: calc((1 - 1) * 1.2vw + 1rem);
   letter-spacing: 0.05em;
   text-align: center;
 }
-footer .instagram .instaPictures {
+footer .instagram .insta-pictures {
   display: grid;
   gap: 11px;
   width: 100%;
   grid-template-columns: repeat(4, 1fr);
 }
-footer .instagram .InstagramSecPics {
+footer .instagram .instagram-sec-pics {
   object-fit: cover;
   object-position: center;
   height: calc(76px + 16.3vw);
@@ -680,19 +680,19 @@ footer .instagram .InstagramSecPics {
     padding-right: 0;
     justify-content: space-evenly;
   }
-  footer .instagram .titleinstagram {
+  footer .instagram .title-instagram {
     height: 164px;
     justify-content: center;
   }
-  footer .instagram .titleinstagram h2 {
+  footer .instagram .title-instagram h2 {
     font-size: calc(2.1875rem + 0.1vw);
     line-height: calc(1.45em * (1 + (1 - 3.5) / 25));
   }
-  footer .instagram .instaPictures {
+  footer .instagram .insta-pictures {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
-  footer .instagram .InstagramSecPics {
+  footer .instagram .instagram-sec-pics {
     height: 164px;
   }
 }
@@ -709,8 +709,8 @@ footer .instagram .InstagramSecPics {
 /* =========================Footer Instagram Animation================== */
 /* =========================Footer Instagram============================ */
 
-/* =========================Footer Endfooter============================ */
-footer .endfooter {
+/* =========================Footer end-footer============================ */
+footer .end-footer {
   width: 100%;
   padding-left: 3vw;
   padding-right: 3vw;
@@ -718,7 +718,7 @@ footer .endfooter {
   padding-top: calc(16vmax / 10);
   padding-bottom: calc(16vmax / 3.1);
 }
-footer .endfooter .footercomponents {
+footer .end-footer .footer-components {
   width: 100%;
   height: 100%;
   display: grid;
@@ -726,7 +726,7 @@ footer .endfooter .footercomponents {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 20% 40% 40%;
 }
-footer .endfooter .footercomponents .westleypets {
+footer .end-footer .footer-components .westley-pets {
   grid-row: span 3;
   grid-column: 1;
   display: flex;
@@ -734,12 +734,12 @@ footer .endfooter .footercomponents .westleypets {
   align-items: flex-start;
   justify-content: space-between;
 }
-footer .endfooter .footercomponents .westleypets h4 {
+footer .end-footer .footer-components .westley-pets h4 {
   font-size: calc((1.4 - 1) * 1.2vw + 1rem);
   line-height: calc(1.45em * (1 + (1 - 1.4) / 25));
   font-weight: 400;
 }
-footer .endfooter .footercomponents .westleypets .socialmedia {
+footer .end-footer .footer-components .westley-pets .social-media {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -747,18 +747,18 @@ footer .endfooter .footercomponents .westleypets .socialmedia {
   gap: 13px;
   margin-bottom: 15px;
 }
-footer .endfooter .footercomponents .westleypets p {
+footer .end-footer .footer-components .westley-pets p {
   font-size: calc((0.8 - 1) * 1.2vw + 1rem);
   line-height: 1.4em;
   letter-spacing: 0.05em;
 }
-footer .endfooter .footercomponents .contactlist {
+footer .end-footer .footer-components .contact-list {
   grid-column: 2;
   grid-row: span 3;
   display: grid;
   grid-template-rows: repeat(20, 1fr);
 }
-footer .endfooter .footercomponents .contactlist ul {
+footer .end-footer .footer-components .contact-list ul {
   list-style: none;
   height: 100%;
   font-size: calc((0.9 - 1) * 1.2vw + 1rem);
@@ -767,55 +767,55 @@ footer .endfooter .footercomponents .contactlist ul {
   margin-left: 60px;
   grid-row: 19;
 }
-footer .endfooter .footercomponents .contactlist ul a,
-footer .endfooter .footercomponents .westleypets p a {
+footer .end-footer .footer-components .contact-list ul a,
+footer .end-footer .footer-components .westley-pets p a {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2em;
 }
-footer .endfooter .footercomponents .finalgrid {
+footer .end-footer .footer-components .final-grid {
   grid-column: 3;
   grid-row: span 3;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(20, 1fr);
 }
-footer .endfooter .footercomponents .finalgrid .getupdates {
+footer .end-footer .footer-components .final-grid .getupdates {
   grid-row-start: 5;
   display: flex;
 }
-footer .endfooter .footercomponents .finalgrid .getupdates p {
+footer .end-footer .footer-components .final-grid .getupdates p {
   font-size: calc((0.9 - 1) * 1.2vw + 1rem);
   letter-spacing: 0.05em;
   line-height: 1.4em;
 }
-footer .endfooter .footercomponents .finalgrid .searchbarAndButton {
+footer .end-footer .footer-components .final-grid .searchbar-and-button {
   justify-content: space-between;
   align-items: center;
   grid-row-start: 19;
 }
 footer
-  .endfooter
-  .footercomponents
-  .finalgrid
-  .searchbarAndButton
+  .end-footer
+  .footer-components
+  .final-grid
+  .searchbar-and-button
   input[type="email"]::placeholder {
   color: rgb(212, 206, 206);
 }
 footer
-  .endfooter
-  .footercomponents
-  .finalgrid
-  .searchbarAndButton
+  .end-footer
+  .footer-components
+  .final-grid
+  .searchbar-and-button
   input[type="email"]:focus {
   outline: 2px solid rgb(0, 0, 0);
   outline-offset: 2px;
 }
 footer
-  .endfooter
-  .footercomponents
-  .finalgrid
-  .searchbarAndButton
+  .end-footer
+  .footer-components
+  .final-grid
+  .searchbar-and-button
   input[type="email"] {
   all: unset;
   width: 220px;
@@ -825,12 +825,18 @@ footer
   line-height: 1.2rem;
   letter-spacing: 0.05em;
 }
-footer .endfooter .footercomponents .finalgrid .searchbarAndButton form {
+footer .end-footer .footer-components .final-grid .searchbar-and-button form {
   grid-row-start: 15;
   display: flex;
   gap: 10px;
 }
-footer .endfooter .footercomponents .finalgrid .searchbarAndButton form button {
+footer
+  .end-footer
+  .footer-components
+  .final-grid
+  .searchbar-and-button
+  form
+  button {
   all: unset;
   width: 136.97px;
   height: 64px;
@@ -844,92 +850,92 @@ footer .endfooter .footercomponents .finalgrid .searchbarAndButton form button {
   text-wrap: nowrap;
 }
 footer
-  .endfooter
-  .footercomponents
-  .finalgrid
-  .searchbarAndButton
+  .end-footer
+  .footer-components
+  .final-grid
+  .searchbar-and-button
   form
   button:hover {
   color: white;
   background-color: black;
   cursor: pointer;
 }
-/* =========================EndfooterAnimation========================== */
+/* =========================end-footerAnimation========================== */
 @media only screen and (max-width: 768px) {
   footer {
     height: 1000px;
     gap: 10px;
   }
-  footer .endfooter .footercomponents {
+  footer .end-footer .footer-components {
     height: 350px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
-  footer .endfooter .footercomponents .westleypets {
+  footer .end-footer .footer-components .westley-pets {
     grid-column: span 3;
     grid-row: 1;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
   }
-  footer .endfooter .footercomponents .westleypets h4 {
+  footer .end-footer .footer-components .westley-pets h4 {
     grid-column: 1;
     grid-row: 1;
   }
-  footer .endfooter .footercomponents .westleypets .socialmedia {
+  footer .end-footer .footer-components .westley-pets .social-media {
     grid-column: 2;
     grid-row: 1;
     margin-left: 5px;
   }
-  footer .endfooter .footercomponents .westleypets p {
+  footer .end-footer .footer-components .westley-pets p {
     grid-column: 2;
     grid-row: 2;
     overflow-wrap: break-word;
   }
-  footer .endfooter .footercomponents .finalgrid {
+  footer .end-footer .footer-components .final-grid {
     grid-column: span 3;
     grid-row: 3;
     display: block;
   }
-  footer .endfooter .footercomponents .finalgrid .searchbarAndButton form {
+  footer .end-footer .footer-components .final-grid .searchbar-and-button form {
     flex-direction: column;
   }
   footer
-    .endfooter
-    .footercomponents
-    .finalgrid
-    .searchbarAndButton
+    .end-footer
+    .footer-components
+    .final-grid
+    .searchbar-and-button
     form
     input[type="email"] {
     width: 60%;
   }
-  footer .endfooter .footercomponents .contactlist {
+  footer .end-footer .footer-components .contact-list {
     grid-row: 2;
     grid-column: 1;
     display: block;
     height: 50px;
   }
-  footer .endfooter .footercomponents .contactlist ul {
+  footer .end-footer .footer-components .contact-list ul {
     margin: 0;
   }
 }
 @media only screen and (max-width: 326px) {
-  footer .endfooter .footercomponents {
+  footer .end-footer .footer-components {
     height: calc(750px - 100vw);
     padding-bottom: 50px;
   }
 }
 @media only screen and (max-width: 225px) {
-  footer .endfooter .footercomponents .westleypets p {
+  footer .end-footer .footer-components .westley-pets p {
     word-break: break-all;
   }
 }
-/* =========================EndfooterAnimation========================== */
-/* =========================Footer Endfooter============================ */
+/* =========================end-footerAnimation========================== */
+/* =========================Footer end-footer============================ */
 /* =========================Footer===================================================================== */
 
-/* SSSSSSSSSSSSSSSSSSSSSSSSquareSpaceButtonSSSSSSSSSSSSSSSSSSSSSSSS  */
-.pagewrapper a .squarespacebutton {
+/* SSSSSSSSSSSSSSSSSSSSSSSsquarespace-buttonSSSSSSSSSSSSSSSSSSSSSSSS  */
+.page-wrapper a .squarespace-button {
   background-image: url(logo..svg);
   background-position: center;
   background-size: cover;
@@ -943,21 +949,21 @@ footer
   overflow: hidden;
   cursor: pointer;
 }
-.pagewrapper a .squarespacebutton .foranimation {
+.page-wrapper a .squarespace-button .for-animation {
   width: 729px;
   height: 100%;
   display: grid;
   grid-template-columns: repeat(3, 243px);
   grid-template-rows: 1fr;
 }
-.pagewrapper a .squarspacelogo {
+.page-wrapper a .squarspacelogo {
   position: absolute;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
 }
-.pagewrapper a .squarespacebutton .foranimation .greybox {
+.page-wrapper a .squarespace-button .for-animation .grey-box {
   background-color: white;
   opacity: 0.2;
 }
@@ -976,16 +982,16 @@ footer
     transform: translateX(0px);
   }
 }
-.pagewrapper a .squarespacebutton .foranimation {
+.page-wrapper a .squarespace-button .for-animation {
   animation-name: offhover;
   animation-timing-function: linear;
   animation-duration: 250ms;
   animation-fill-mode: forwards;
 }
-.pagewrapper a .squarespacebutton .foranimation:hover {
+.page-wrapper a .squarespace-button .for-animation:hover {
   animation-name: onhover;
   animation-duration: 250ms;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
 }
-/* SSSSSSSSSSSSSSSSSSSSSSSSquareSpaceButtonSSSSSSSSSSSSSSSSSSSSSSSS  */
+/* SSSSSSSSSSSSSSSSSSSSSSSsquarespace-buttonSSSSSSSSSSSSSSSSSSSSSSSS  */
