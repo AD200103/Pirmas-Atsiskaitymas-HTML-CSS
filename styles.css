@@ -19,15 +19,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-/* =========================PageAnimation============================== */
-.page-wrapper {
   animation-name: appear;
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
-/* =========================PageAnimation============================== */
 
 /* ============================HEADER================================================================== */
 header {
@@ -75,35 +70,10 @@ header .burger .lines {
   height: 1px;
   background-color: black;
 }
-/* =========================HeaderAnimation============================ */
-@media only screen and (max-width: 1024px) {
-  header {
-    padding: 8.3vw;
-    padding-left: 3vw;
-    padding-right: 3vw;
-    border-bottom: solid 1px black;
-  }
-  header nav {
-    display: none;
-  }
-  header .burger {
-    display: flex;
-  }
-}
-@media only screen and (max-width: 768px) {
-  header {
-    padding-left: 0;
-    padding-right: 0;
-    width: calc(94% - 6vw);
-  }
-  header a h2 {
-    font-size: 1.1875 rem;
-  }
-}
-/* =========================HeaderAnimation============================ */
 /* ============================HEADER================================================================== */
 
 /* ============================Main==================================================================== */
+
 /* =======================Main introduction============================ */
 main,
 main .introduction {
@@ -226,22 +196,6 @@ main .introduction .pictures-of-introduction .quick-view a {
   font-size: 0.75rem;
   font-family: Helvetica, Arial, sans-serif;
 }
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes disappear {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 .quick-view {
   animation-name: disappear;
   animation-duration: 700ms;
@@ -252,73 +206,6 @@ main .introduction .pictures-of-introduction .quick-view a {
   animation-duration: 700ms;
   animation-fill-mode: forwards;
 }
-/* =========================IntroductionAnimation====================== */
-@media only screen and (max-width: 768px) {
-  main .introduction .intro-sec-img,
-  main .introduction h1,
-  main .introduction .intro-info {
-    padding-left: 0;
-    padding-right: 0;
-    width: calc(94% - 6vw);
-  }
-  main .introduction .intro-sec-img {
-    height: 250px;
-    margin-top: 20%;
-  }
-  main .introduction h1 {
-    font-size: 2.8125rem;
-  }
-  main .introduction .intro-info {
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 50px;
-  }
-  main .introduction .intro-info h2,
-  main .introduction .intro-info p {
-    width: 100%;
-  }
-  main .introduction .intro-info p {
-    gap: 15px;
-  }
-  main .introduction .pictures-of-introduction {
-    flex-direction: column;
-    gap: 15px;
-    height: 140vw;
-    width: calc(94% - 6vw);
-    margin-top: calc((0.9 - 1) * 30vw + 3.5rem);
-    margin-bottom: calc((0.9 - 1) * 30vw + 3.125rem);
-  }
-  main .introduction .pictures-of-introduction .second-dog {
-    width: 60%;
-    height: 300px;
-    align-self: flex-start;
-  }
-  main .introduction .pictures-of-introduction .side-picture {
-    width: 64%;
-    height: 70%;
-    align-self: flex-end;
-  }
-  main .introduction .pictures-of-introduction .side-picture .collar {
-    height: 100%;
-  }
-}
-@media only screen and (max-width: 456px) {
-  main .introduction .pictures-of-introduction {
-    height: 638px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-  main .introduction .intro-info {
-    height: fit-content;
-  }
-}
-@media only screen and (max-width: 232px) {
-  main .introduction .intro-info {
-    gap: 0;
-  }
-}
-/* =========================IntroductionAnimation====================== */
 /* =======================Main introduction============================ */
 
 /* =========================Main products============================== */
@@ -374,7 +261,6 @@ main .products ul li .info-under-pic {
   margin-top: 13px;
   margin-bottom: 13px;
 }
-
 main .products ul li button {
   all: unset;
   width: fit-content;
@@ -435,63 +321,6 @@ main .products ul .first-product .buttons-rl button img {
   width: 20px;
   height: 20px;
 }
-/* =========================Products Animation========================= */
-@media only screen and (min-width: 992px) and (max-width: 1190px) {
-  main .products ul li .first-collar {
-    height: 67.3%;
-  }
-  main .products ul li .info-under-pic {
-    gap: 10px;
-    margin-top: 12px;
-    margin-bottom: 12px;
-  }
-}
-@media only screen and (max-width: 992px) {
-  main .products {
-    height: calc(118px + 59vw);
-  }
-  main .products ul li {
-    width: 40vw;
-  }
-  main .products ul li .first-collar {
-    height: 73%;
-  }
-  main .products ul li:last-child {
-    display: none;
-  }
-  main .products ul li .info-under-pic {
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-}
-@media only screen and (max-width: 576px) {
-  main .products {
-    height: calc(360px + 75vw);
-  }
-  main .products ul .arrow-to-the-right-btn {
-    display: none;
-  }
-  main .products ul li:not(:first-child) {
-    display: none;
-  }
-  main .products ul li {
-    justify-content: top;
-    gap: 15px;
-    width: 100%;
-  }
-  main .products ul li .info-under-pic {
-    gap: 10px;
-    margin: 0;
-  }
-  main .products ul .first-product .buttons-rl {
-    display: flex;
-  }
-  main .products ul .first-product .buttons-rl button {
-    display: flex;
-    opacity: 1;
-  }
-}
-/* =========================Products Animation========================= */
 /* =========================Main products============================== */
 
 /* =========================Main feedback============================== */
@@ -582,28 +411,6 @@ main .feedback .small-buttons-rl button img {
   width: 20px;
   height: 20px;
 }
-/* =========================Feedback Animation========================= */
-@media only screen and (max-width: 745px) and (min-width: 574px) {
-  main .feedback {
-    height: calc(631px - 17.5vw);
-  }
-}
-@media only screen and (max-width: 574px) {
-  main .feedback {
-    height: calc(730px - 35vw);
-  }
-  main .feedback .dog-painting {
-    width: 54px;
-    height: 94px;
-  }
-  main .feedback .big-buttons-rl {
-    display: none;
-  }
-  main .feedback .small-buttons-rl {
-    display: flex;
-  }
-}
-/* =========================Feedback Animation========================= */
 /* =========================Main feedback============================== */
 /* ============================Main==================================================================== */
 
@@ -669,44 +476,6 @@ footer .instagram .instagram-sec-pics {
   width: 100%;
   border-radius: 40px;
 }
-/* =========================Footer Instagram Animation================= */
-@media only screen and (max-width: 768px) {
-  footer {
-    width: calc(94% - 6vw);
-    overflow-wrap: break-word;
-  }
-  footer .instagram {
-    padding-left: 0;
-    padding-right: 0;
-    justify-content: space-evenly;
-  }
-  footer .instagram .title-instagram {
-    height: 164px;
-    justify-content: center;
-  }
-  footer .instagram .title-instagram h2 {
-    font-size: calc(2.1875rem + 0.1vw);
-    line-height: calc(1.45em * (1 + (1 - 3.5) / 25));
-  }
-  footer .instagram .insta-pictures {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
-  footer .instagram .instagram-sec-pics {
-    height: 164px;
-  }
-}
-@media only screen and (max-width: 768px) and (min-width: 312px) {
-  footer .instagram {
-    height: 549px;
-  }
-}
-@media only screen and (max-width: 312px) {
-  footer .instagram {
-    height: calc(806px - 81vw);
-  }
-}
-/* =========================Footer Instagram Animation================== */
 /* =========================Footer Instagram============================ */
 
 /* =========================Footer end-footer============================ */
@@ -860,6 +629,292 @@ footer
   background-color: black;
   cursor: pointer;
 }
+/* =========================Footer end-footer============================ */
+/* =========================Footer===================================================================== */
+
+/* SSSSSSSSSSSSSSSSSSSSSSSsquarespace-buttonSSSSSSSSSSSSSSSSSSSSSSSS  */
+.page-wrapper a .squarespace-button {
+  background-image: url(logo..svg);
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  width: 243px;
+  height: 76px;
+  right: 11px;
+  top: 87.9%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+.page-wrapper a .squarespace-button .for-animation {
+  width: 729px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 243px);
+  grid-template-rows: 1fr;
+}
+.page-wrapper a .squarespace-button .for-animation .grey-box {
+  background-color: white;
+  opacity: 0.2;
+}
+.page-wrapper a .squarespace-button .for-animation {
+  animation-name: offhover;
+  animation-timing-function: linear;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards;
+}
+.page-wrapper a .squarespace-button .for-animation:hover {
+  animation-name: onhover;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+/* SSSSSSSSSSSSSSSSSSSSSSSsquarespace-buttonSSSSSSSSSSSSSSSSSSSSSSSS  */
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* ==================================================================== */
+@keyframes onhover {
+  0% {
+  }
+  100% {
+    transform: translateX(243px);
+  }
+}
+@keyframes offhover {
+  0% {
+    transform: translateX(243px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+/* =========================HeaderAnimation============================ */
+@media only screen and (max-width: 1024px) {
+  header {
+    padding: 8.3vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    border-bottom: solid 1px black;
+  }
+  header nav {
+    display: none;
+  }
+  header .burger {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header {
+    padding-left: 0;
+    padding-right: 0;
+    width: calc(94% - 6vw);
+  }
+  header a h2 {
+    font-size: 1.1875 rem;
+  }
+}
+/* =========================HeaderAnimation============================ */
+/* =========================IntroductionAnimation====================== */
+@media only screen and (max-width: 768px) {
+  main .introduction .intro-sec-img,
+  main .introduction h1,
+  main .introduction .intro-info {
+    padding-left: 0;
+    padding-right: 0;
+    width: calc(94% - 6vw);
+  }
+  main .introduction .intro-sec-img {
+    height: 250px;
+    margin-top: 20%;
+  }
+  main .introduction h1 {
+    font-size: 2.8125rem;
+  }
+  main .introduction .intro-info {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+  }
+  main .introduction .intro-info h2,
+  main .introduction .intro-info p {
+    width: 100%;
+  }
+  main .introduction .intro-info p {
+    gap: 15px;
+  }
+  main .introduction .pictures-of-introduction {
+    flex-direction: column;
+    gap: 15px;
+    height: 140vw;
+    width: calc(94% - 6vw);
+    margin-top: calc((0.9 - 1) * 30vw + 3.5rem);
+    margin-bottom: calc((0.9 - 1) * 30vw + 3.125rem);
+  }
+  main .introduction .pictures-of-introduction .second-dog {
+    width: 60%;
+    height: 300px;
+    align-self: flex-start;
+  }
+  main .introduction .pictures-of-introduction .side-picture {
+    width: 64%;
+    height: 70%;
+    align-self: flex-end;
+  }
+  main .introduction .pictures-of-introduction .side-picture .collar {
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 456px) {
+  main .introduction .pictures-of-introduction {
+    height: 638px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  main .introduction .intro-info {
+    height: fit-content;
+  }
+}
+@media only screen and (max-width: 232px) {
+  main .introduction .intro-info {
+    gap: 0;
+  }
+}
+/* =========================IntroductionAnimation====================== */
+
+/* =========================Products Animation========================= */
+@media only screen and (min-width: 992px) and (max-width: 1190px) {
+  main .products ul li .first-collar {
+    height: 67.3%;
+  }
+  main .products ul li .info-under-pic {
+    gap: 10px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  main .products {
+    height: calc(118px + 59vw);
+  }
+  main .products ul li {
+    width: 40vw;
+  }
+  main .products ul li .first-collar {
+    height: 73%;
+  }
+  main .products ul li:last-child {
+    display: none;
+  }
+  main .products ul li .info-under-pic {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  main .products {
+    height: calc(360px + 75vw);
+  }
+  main .products ul .arrow-to-the-right-btn {
+    display: none;
+  }
+  main .products ul li:not(:first-child) {
+    display: none;
+  }
+  main .products ul li {
+    justify-content: top;
+    gap: 15px;
+    width: 100%;
+  }
+  main .products ul li .info-under-pic {
+    gap: 10px;
+    margin: 0;
+  }
+  main .products ul .first-product .buttons-rl {
+    display: flex;
+  }
+  main .products ul .first-product .buttons-rl button {
+    display: flex;
+    opacity: 1;
+  }
+}
+/* =========================Products Animation========================= */
+/* =========================Feedback Animation========================= */
+@media only screen and (max-width: 745px) and (min-width: 574px) {
+  main .feedback {
+    height: calc(631px - 17.5vw);
+  }
+}
+@media only screen and (max-width: 574px) {
+  main .feedback {
+    height: calc(730px - 35vw);
+  }
+  main .feedback .dog-painting {
+    width: 54px;
+    height: 94px;
+  }
+  main .feedback .big-buttons-rl {
+    display: none;
+  }
+  main .feedback .small-buttons-rl {
+    display: flex;
+  }
+}
+/* =========================Feedback Animation========================= */
+/* =========================Footer Instagram Animation================= */
+@media only screen and (max-width: 768px) {
+  footer {
+    width: calc(94% - 6vw);
+    overflow-wrap: break-word;
+  }
+  footer .instagram {
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: space-evenly;
+  }
+  footer .instagram .title-instagram {
+    height: 164px;
+    justify-content: center;
+  }
+  footer .instagram .title-instagram h2 {
+    font-size: calc(2.1875rem + 0.1vw);
+    line-height: calc(1.45em * (1 + (1 - 3.5) / 25));
+  }
+  footer .instagram .insta-pictures {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  footer .instagram .instagram-sec-pics {
+    height: 164px;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 312px) {
+  footer .instagram {
+    height: 549px;
+  }
+}
+@media only screen and (max-width: 312px) {
+  footer .instagram {
+    height: calc(806px - 81vw);
+  }
+}
+/* =========================Footer Instagram Animation================== */
 /* =========================end-footerAnimation========================== */
 @media only screen and (max-width: 768px) {
   footer {
@@ -931,67 +986,3 @@ footer
   }
 }
 /* =========================end-footerAnimation========================== */
-/* =========================Footer end-footer============================ */
-/* =========================Footer===================================================================== */
-
-/* SSSSSSSSSSSSSSSSSSSSSSSsquarespace-buttonSSSSSSSSSSSSSSSSSSSSSSSS  */
-.page-wrapper a .squarespace-button {
-  background-image: url(logo..svg);
-  background-position: center;
-  background-size: cover;
-  position: fixed;
-  width: 243px;
-  height: 76px;
-  right: 11px;
-  top: 87.9%;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  cursor: pointer;
-}
-.page-wrapper a .squarespace-button .for-animation {
-  width: 729px;
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 243px);
-  grid-template-rows: 1fr;
-}
-.page-wrapper a .squarspacelogo {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-}
-.page-wrapper a .squarespace-button .for-animation .grey-box {
-  background-color: white;
-  opacity: 0.2;
-}
-@keyframes onhover {
-  0% {
-  }
-  100% {
-    transform: translateX(243px);
-  }
-}
-@keyframes offhover {
-  0% {
-    transform: translateX(243px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
-.page-wrapper a .squarespace-button .for-animation {
-  animation-name: offhover;
-  animation-timing-function: linear;
-  animation-duration: 250ms;
-  animation-fill-mode: forwards;
-}
-.page-wrapper a .squarespace-button .for-animation:hover {
-  animation-name: onhover;
-  animation-duration: 250ms;
-  animation-fill-mode: forwards;
-  animation-timing-function: linear;
-}
-/* SSSSSSSSSSSSSSSSSSSSSSSsquarespace-buttonSSSSSSSSSSSSSSSSSSSSSSSS  */
